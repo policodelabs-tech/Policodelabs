@@ -11,8 +11,13 @@ body {
 /* ------------------------------
    Navbar
 ------------------------------ */
+.fw-bold{
+    color: #000000 !important; /* color llamativo */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 .navbar {
-    background-color: #060668 !important; /* color oscuro elegante */
+    background: linear-gradient(to left, #c3d9a5, #67b093, #43a49e); /* degradado del logo */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -23,7 +28,7 @@ body {
 }
 
 .nav-link {
-    color: #e94560 !important; /* color llamativo */
+    color: #000000 !important; /* color llamativo */
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -37,30 +42,32 @@ body {
 ------------------------------ */
 .hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 70vh; /* Altura ajustada */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
     overflow: hidden;
+    padding: 2rem; /* Espaciado interno */
 }
 
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    max-height: 80%;
+    background: rgba(0, 0, 0, 0.151); /* Fondo más oscuro para mejor legibilidad */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 2rem;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    max-width: 700px; /* Ancho máximo para centrar el texto */
+    padding: 1.5rem;
+    color: #000000;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para destacar el texto */
 }
 .hero-bg {
     position: absolute;
@@ -73,42 +80,43 @@ body {
 }
 @media (max-width: 768px) {
     .hero {
-        min-height: 40vh;
-        padding: 2rem 0;
+        min-height: 50vh; /* Altura ajustada para pantallas pequeñas */
+        padding: 1rem;
     }
     .hero-content {
         padding: 1rem;
     }
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Tamaño reducido */
     }
     .hero p {
-        font-size: 1rem;
+        font-size: 1rem; /* Tamaño reducido */
     }
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Tamaño ajustado */
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem; /* Tamaño ajustado */
+    margin-bottom: 1.5rem;
+    line-height: 1.6; /* Mejor espaciado entre líneas */
 }
 
 .hero .btn-primary {
-    background-color: #e94560;
+    background-color: #000000;
     border: none;
     padding: 0.75rem 2rem;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Tamaño ajustado */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .hero .btn-primary:hover {
-    background-color: #ff2e63;
+    background-color: #000000;
     transform: translateY(-3px);
 }
 
@@ -168,8 +176,8 @@ form .btn-primary:hover {
    Footer
 ------------------------------ */
 footer {
-    background-color: #060668 !important;
-    color: #fff;
+    background: linear-gradient(to left, #c3d9a5, #67b093, #43a49e) !important; /* degradado del logo */
+    color: #000000;
     padding: 2rem 1rem;
     text-align: center;
 }
