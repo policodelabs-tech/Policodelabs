@@ -12,7 +12,7 @@ body {
    Navbar
 ------------------------------ */
 .navbar {
-    background-color: #1a1a2e !important; /* color oscuro elegante */
+    background-color: #060668 !important; /* color oscuro elegante */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -37,14 +37,13 @@ body {
 ------------------------------ */
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
-    /* La imagen se debe reemplazar con tu archivo local */
-    background: url("img/hero.jpg") no-repeat center center/cover;
+    overflow: hidden;
 }
 
 .hero::after {
@@ -52,13 +51,40 @@ body {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 800px;
     padding: 2rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+@media (max-width: 768px) {
+    .hero {
+        min-height: 40vh;
+        padding: 2rem 0;
+    }
+    .hero-content {
+        padding: 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
 }
 
 .hero h1 {
@@ -142,7 +168,7 @@ form .btn-primary:hover {
    Footer
 ------------------------------ */
 footer {
-    background-color: #1a1a2e;
+    background-color: #060668 !important;
     color: #fff;
     padding: 2rem 1rem;
     text-align: center;
