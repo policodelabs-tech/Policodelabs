@@ -12,12 +12,12 @@ body {
    Navbar
 ------------------------------ */
 .fw-bold{
-    color: #000000 !important; /* color llamativo */
+    color: #000000; /* color llamativo */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 .navbar {
-    background: linear-gradient(to left, #c3d9a5, #67b093, #43a49e); /* degradado del logo */
+    background: linear-gradient(to left, #e7d49e, #78b593, #099688); /* degradado del logo */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -28,13 +28,13 @@ body {
 }
 
 .nav-link {
-    color: #000000 !important; /* color llamativo */
+    color: #000000; /* color llamativo */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #0f3460 !important;
+    color: #000080;
 }
 
 /* ------------------------------
@@ -57,18 +57,19 @@ body {
     position: absolute;
     inset: 0;
     max-height: 80%;
-    background: rgba(0, 0, 0, 0.151); /* Fondo más oscuro para mejor legibilidad */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px; /* Ancho máximo para centrar el texto */
+    max-width: 700px;
     padding: 1.5rem;
     color: #000000;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para destacar el texto */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 20rem; /* Ajusta el margen para que no quede tan abajo */
 }
+
 .hero-bg {
     position: absolute;
     top: 0;
@@ -78,19 +79,18 @@ body {
     object-fit: cover;
     z-index: 0;
 }
+
 @media (max-width: 768px) {
     .hero {
-        min-height: 50vh; /* Altura ajustada para pantallas pequeñas */
+        min-height: 50vh;
         padding: 1rem;
     }
     .hero-content {
         padding: 1rem;
-    }
-    .hero h1 {
-        font-size: 2.5rem; /* Tamaño reducido */
+        margin-top: 2rem; /* Menor margen en móviles */
     }
     .hero p {
-        font-size: 1rem; /* Tamaño reducido */
+        font-size: 1rem;
     }
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 .hero .btn-primary:hover {
-    background-color: #000000;
+    background-color: #000080;
     transform: translateY(-3px);
 }
 
@@ -163,20 +163,20 @@ form .form-control {
 }
 
 form .btn-primary {
-    background-color: #1a1a2e;
+    background-color: #000000;
     border: none;
     transition: background-color 0.3s ease;
 }
 
 form .btn-primary:hover {
-    background-color: #0f3460;
+    background-color: #000080;
 }
 
 /* ------------------------------
    Footer
 ------------------------------ */
 footer {
-    background: linear-gradient(to left, #c3d9a5, #67b093, #43a49e) !important; /* degradado del logo */
+    background: linear-gradient(to left, #e7d49e, #78b593, #099688); /* degradado del logo */
     color: #000000;
     padding: 2rem 1rem;
     text-align: center;
