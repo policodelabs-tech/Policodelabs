@@ -173,7 +173,7 @@ section h2 {
 }
 
 .card h5 {
-    color: #e94560;
+    color: #099688;
     font-weight: 600;
 }
 
@@ -208,22 +208,47 @@ form .btn-primary:hover {
 /* ------------------------------
    Footer
 ------------------------------ */
-footer {
+footer{
     background: linear-gradient(to left, #e7d49e, #78b593, #099688);
-    color: #000000;
-    padding: 2rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.site-footer a{color:#f5f5f5;text-decoration:none;opacity:0.95;transition:opacity .18s}
+.site-footer a:hover{opacity:1;text-decoration:underline}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;gap:36px;align-items:flex-start;justify-content:space-between;padding:0 16px;flex-wrap:wrap}
+.footer-col{min-width:200px;flex:1}
+.footer-col h4{margin:0 0 8px;font-size:16px;letter-spacing:1px;font-weight:700;color:#000000}
+.footer-col p, .footer-col li{color:rgba(0, 0, 0, 0.9)}
+.footer-col ul{list-style:none;padding:0;margin:6px 0 0}
+.footer-col ul li{margin:6px 0}
+.footer-bottom{max-width:1200px;margin:18px auto 0;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.footer-bottom .copy{color:rgba(0, 0, 0, 0.8);font-size:13px}
+.footer-bottom .terms a{color:rgba(0, 0, 0, 0.72);font-size:13px;margin-left:10px}
+
+
+.site-footer{
+    background:#000;
+    color:#000000;
+    border-top:1px solid rgba(255,255,255,0.04);
+    padding:40px 20px 18px;
+    font-size:15px;
+    line-height:1.5;
+  }
+
+.derechos{
+    color: #000;
     text-align: center;
 }
 
 footer a {
-    color: #e94560;
+    color: #000000;
     text-decoration: none;
     margin: 0 0.5rem;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #ff2e63;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -339,3 +364,11 @@ footer a:hover {
    Fuentes
 ------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+@media (max-width:900px){
+    .footer-inner{flex-direction:column;gap:18px}
+    .footer-col{min-width:0}
+    .footer-bottom{flex-direction:column;align-items:flex-start}
+    .footer-bottom .terms{margin-top:8px}
+  }
