@@ -154,6 +154,16 @@ section h2 {
     font-weight: 600;
 }
 
+.card-title.text-primary {
+    color: #222 !important;
+}
+
+.card-body h5,
+.card-body h6 {
+    color: #099688 !important;
+    font-weight: 700;
+}
+
 /* ------------------------------
    Contacto
 ------------------------------ */
@@ -192,4 +202,117 @@ footer a {
 footer a:hover {
     color: #ff2e63;
     text-decoration: underline;
+}
+
+/* ------------------------------
+   Conócenos (Misión y Visión)
+------------------------------ */
+.conocenos-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.conocenos-titulo {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.conocenos-section .row {
+    justify-content: center;
+    gap: 2rem;
+}
+
+.conocenos-box {
+    min-width: 280px;
+    max-width: 430px;
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conocenos-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.conocenos-vision h2,
+.conocenos-mision h2 {
+    color: #099688;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .conocenos-section .row {
+        flex-direction: column;
+    }
+    .conocenos-box {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ------------------------------
+   Proyecto
+------------------------------ */
+.proyecto-img-block {
+    width: 100%;
+    max-width: 350px;
+    min-height: 220px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.quickfleet-proyecto .card-title,
+.flowshare-proyecto .card-title {
+    color: #222 !important;
+}
+
+.quickfleet-proyecto .card-body h5,
+.quickfleet-proyecto .card-body h6,
+.flowshare-proyecto .card-body h5,
+.flowshare-proyecto .card-body h6 {
+    color: #099688 !important;
+    font-weight: 700;
+}
+
+.quickfleet-proyecto .card-body.text-center,
+.flowshare-proyecto .card-body.text-center {
+    text-align: inherit !important;
+}
+
+@media (max-width: 991px) {
+    .proyecto-img-block {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    .quickfleet-proyecto,
+    .flowshare-proyecto {
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyecto-img-block {
+        min-height: 120px;
+        padding: 0.5rem;
+    }
+    .quickfleet-proyecto .card,
+    .flowshare-proyecto .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.text-justify {
+    text-align: justify;
 }
