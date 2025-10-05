@@ -19,6 +19,25 @@ img, video {
     height: auto;
 }
 
+/* Pegado del footer abajo */
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Ajusta según la altura real del navbar */
+}
+
+footer {
+    margin-top: auto;
+    background: linear-gradient(to left, #e7d49e, #78b593, #099688);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 32px 0 32px 0; /* padding arriba y abajo */
+}
+
 /* ------------------------------
    Navbar
 ------------------------------ */
@@ -211,6 +230,7 @@ form .btn-primary:hover {
 footer{
     background: linear-gradient(to left, #e7d49e, #78b593, #099688);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 32px 0 32px 0; /* padding arriba y abajo */
 }
 
 .site-footer a{color:#f5f5f5;text-decoration:none;opacity:0.95;transition:opacity .18s}
@@ -372,3 +392,20 @@ footer a:hover {
     .footer-bottom{flex-direction:column;align-items:flex-start}
     .footer-bottom .terms{margin-top:8px}
   }
+
+:root {
+  --color-primario: #099688;
+  --color-secundario: #78b593;
+  --color-terciario: #e7d49e;
+  --color-negro: #000000;
+  --color-hover: #000080;
+  --color-fondo: #f0f2f5;
+}
+
+/* Usar variables en los estilos */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-negro);
+}
+
+/* ...resto de estilos usando variables... */
