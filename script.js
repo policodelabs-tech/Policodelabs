@@ -1,5 +1,5 @@
 /* =====================================================
-   CANVAS MESH — hero background
+   CANVAS MESH
 ===================================================== */
 (function () {
   const c = document.getElementById('meshCanvas');
@@ -10,10 +10,10 @@
   function resize() {
     W = c.width  = c.offsetWidth;
     H = c.height = c.offsetHeight;
-    pts = Array.from({ length: Math.max(30, Math.floor(W * H / 11000)) }, () => ({
+    pts = Array.from({ length: Math.max(24, Math.floor(W * H / 12000)) }, () => ({
       x: Math.random() * W,  y: Math.random() * H,
-      vx: (Math.random() - .5) * .32,  vy: (Math.random() - .5) * .32,
-      r: Math.random() * 1.4 + .7
+      vx: (Math.random() - .5) * .3,  vy: (Math.random() - .5) * .3,
+      r: Math.random() * 1.4 + .6
     }));
   }
 
@@ -27,13 +27,13 @@
     for (let i = 0; i < pts.length; i++) {
       for (let j = i + 1; j < pts.length; j++) {
         const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
-        const d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 155) {
+        const d  = Math.sqrt(dx * dx + dy * dy);
+        if (d < 150) {
           ctx.beginPath();
           ctx.moveTo(pts[i].x, pts[i].y);
           ctx.lineTo(pts[j].x, pts[j].y);
-          ctx.strokeStyle = `rgba(9,150,136,${(1 - d / 155) * .2})`;
-          ctx.lineWidth = .7;
+          ctx.strokeStyle = `rgba(9,150,136,${(1 - d / 150) * .18})`;
+          ctx.lineWidth   = .7;
           ctx.stroke();
         }
       }
@@ -41,7 +41,7 @@
     pts.forEach(p => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(13,184,166,.5)';
+      ctx.fillStyle = 'rgba(13,184,166,.48)';
       ctx.fill();
     });
     requestAnimationFrame(draw);
@@ -57,26 +57,29 @@
 ===================================================== */
 const cdot  = document.getElementById('cdot');
 const cring = document.getElementById('cring');
-let mx = 0, my = 0, rx = 0, ry = 0;
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cdot.style.left = mx + 'px';
-  cdot.style.top  = my + 'px';
-});
+if (window.matchMedia('(hover:hover)').matches) {
+  let mx = 0, my = 0, rx = 0, ry = 0;
 
-(function animRing() {
-  rx += (mx - rx) * .1;
-  ry += (my - ry) * .1;
-  cring.style.left = rx + 'px';
-  cring.style.top  = ry + 'px';
-  requestAnimationFrame(animRing);
-})();
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cdot.style.left = mx + 'px';
+    cdot.style.top  = my + 'px';
+  });
 
-document.querySelectorAll('a,button,.sv,.pj,.ast,.tc,.ctx-item,.pillar,.prop-mv-card').forEach(el => {
-  el.addEventListener('mouseenter', () => cring.classList.add('h'));
-  el.addEventListener('mouseleave', () => cring.classList.remove('h'));
-});
+  (function animRing() {
+    rx += (mx - rx) * .1;
+    ry += (my - ry) * .1;
+    cring.style.left = rx + 'px';
+    cring.style.top  = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  document.querySelectorAll('a, button, .sv, .pj, .ast, .tc, .ctx-item, .pillar, .prop-mv-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cring.classList.add('h'));
+    el.addEventListener('mouseleave', () => cring.classList.remove('h'));
+  });
+}
 
 /* =====================================================
    SCROLL PROGRESS BAR
@@ -88,9 +91,9 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* =====================================================
-   NAVBAR — active link + scrolled shadow
+   NAVBAR — scrolled style + active link
 ===================================================== */
-const navbar = document.getElementById('navbar');
+const navbar      = document.getElementById('navbar');
 const navSections = ['inicio', 'propuesta', 'nosotros', 'servicios', 'proyectos', 'contacto'];
 
 window.addEventListener('scroll', () => {
@@ -98,7 +101,7 @@ window.addEventListener('scroll', () => {
   let current = 'inicio';
   navSections.forEach(id => {
     const el = document.getElementById(id);
-    if (el && scrollY >= el.offsetTop - 130) current = id;
+    if (el && scrollY >= el.offsetTop - 140) current = id;
   });
   document.querySelectorAll('.nav-links a').forEach(a =>
     a.classList.toggle('active', a.getAttribute('href') === '#' + current)
@@ -106,26 +109,26 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* =====================================================
-   HAMBURGER MOBILE MENU
+   HAMBURGER + MOBILE NAV
 ===================================================== */
-const ham    = document.getElementById('ham');
-const mobNav = document.getElementById('mobNav');
-let menuOpen = false;
+const ham     = document.getElementById('ham');
+const mobNav  = document.getElementById('mobNav');
+const mobClose = document.getElementById('mobClose');
+let menuOpen  = false;
 
-ham.addEventListener('click', () => {
-  menuOpen = !menuOpen;
+function toggleMenu(open) {
+  menuOpen = open;
   mobNav.classList.toggle('open', menuOpen);
+  document.body.style.overflow = menuOpen ? 'hidden' : '';
   const ss = ham.querySelectorAll('span');
-  ss[0].style.transform = menuOpen ? 'rotate(45deg) translate(5px,5px)'  : '';
+  ss[0].style.transform = menuOpen ? 'rotate(45deg) translate(5px,5px)'   : '';
   ss[1].style.opacity   = menuOpen ? '0' : '1';
-  ss[2].style.transform = menuOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
-});
+  ss[2].style.transform = menuOpen ? 'rotate(-45deg) translate(5px,-5px)'  : '';
+}
 
-document.querySelectorAll('.mob-nav a').forEach(a => a.addEventListener('click', () => {
-  menuOpen = false;
-  mobNav.classList.remove('open');
-  ham.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-}));
+ham.addEventListener('click',      () => toggleMenu(!menuOpen));
+mobClose.addEventListener('click', () => toggleMenu(false));
+document.querySelectorAll('.mob-nav a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 
 /* =====================================================
    SCROLL REVEAL
@@ -134,9 +137,9 @@ const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); }
   });
-}, { threshold: .1 });
+}, { threshold: .08 });
 
-document.querySelectorAll('.sr,.sr-l,.sr-r,.sr-sc').forEach(el => revealObs.observe(el));
+document.querySelectorAll('.sr, .sr-l, .sr-r, .sr-sc').forEach(el => revealObs.observe(el));
 
 /* =====================================================
    COUNTER ANIMATION
@@ -160,15 +163,15 @@ const countObs = new IntersectionObserver(entries => {
       countObs.unobserve(e.target);
     }
   });
-}, { threshold: .6 });
+}, { threshold: .5 });
 
 document.querySelectorAll('.hero-stats, .about-stats').forEach(el => countObs.observe(el));
 
 /* =====================================================
-   SERVICES COUNTER
+   SERVICES HOVER COUNTER
 ===================================================== */
-const svRows   = document.querySelectorAll('.sv');
-const svcCtr   = document.getElementById('svc-counter');
+const svRows = document.querySelectorAll('.sv');
+const svcCtr = document.getElementById('svc-counter');
 
 svRows.forEach(row => {
   row.addEventListener('mouseenter', () => {
@@ -218,7 +221,7 @@ document.addEventListener('keydown', e => {
 ===================================================== */
 function goTo(sel) {
   const el = document.querySelector(sel);
-  if (el) el.scrollIntoView({ behavior: 'smooth' });
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a =>
@@ -230,13 +233,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a =>
 ===================================================== */
 document.getElementById('cform').addEventListener('submit', function (e) {
   e.preventDefault();
-  const d = new FormData(this);
+  const d    = new FormData(this);
   const subj = encodeURIComponent(`Nuevo contacto de ${d.get('nombre')} — ${d.get('proyecto') || 'No especificado'}`);
   const body = encodeURIComponent(
     `Nombre: ${d.get('nombre')}\nEmpresa: ${d.get('empresa') || 'No especificada'}\nEmail: ${d.get('email')}\nProyecto: ${d.get('proyecto') || 'No especificado'}\n\nMensaje:\n${d.get('mensaje')}\n\n---\nEnviado desde policodelabs.com`
   );
   window.location.href = `mailto:policodelabs@gmail.com?subject=${subj}&body=${body}`;
-
   const btn = this.querySelector('.btn-send');
   const orig = btn.innerHTML;
   btn.innerHTML = '✓ &nbsp;¡Redirigiendo a tu correo!';
@@ -245,7 +247,7 @@ document.getElementById('cform').addEventListener('submit', function (e) {
 });
 
 /* =====================================================
-   TYPEWRITER — propuesta section
+   TYPEWRITER
 ===================================================== */
 (function () {
   const el = document.getElementById('twText');
@@ -259,14 +261,13 @@ document.getElementById('cform').addEventListener('submit', function (e) {
       el.textContent = word.substring(0, ci + 1);
       ci++;
       if (ci === word.length) { deleting = true; setTimeout(tick, 1800); return; }
-      setTimeout(tick, 120);
+      setTimeout(tick, 115);
     } else {
       el.textContent = word.substring(0, ci - 1);
       ci--;
-      if (ci === 0) { deleting = false; wi++; setTimeout(tick, 400); return; }
-      setTimeout(tick, 55);
+      if (ci === 0) { deleting = false; wi++; setTimeout(tick, 380); return; }
+      setTimeout(tick, 52);
     }
   }
-
   setTimeout(tick, 600);
 })();
