@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Policode Labs — Tecnología que cruza fronteras</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policode Labs — Tecnología que cruza fronteras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- progress bar -->
+
+<!-- UI chrome -->
 <div id="progress-bar"></div>
-<!-- cursor -->
-<div class="c-dot" id="cdot"></div>
+<div class="c-dot"  id="cdot"></div>
 <div class="c-ring" id="cring"></div>
 
-<!-- mobile menu -->
+<!-- Mobile menu -->
 <div class="mob-nav" id="mobNav">
   <a href="#inicio">Inicio</a>
-  <a href="#propuesta">Propuesta</a>
+  <a href="#nosotros">Nosotros</a>
   <a href="#servicios">Servicios</a>
   <a href="#proyectos">Proyectos</a>
-  <a href="#nosotros">Nosotros</a>
   <a href="#contacto">Contacto</a>
 </div>
 
@@ -30,119 +29,93 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#inicio" class="nav-logo">
-      <div class="nav-logo-mark">
-        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      </div>
-      Policode Labs
+      <img src="web-Logo-Policode-Labs-v1.svg" alt="Policode Labs" class="nav-logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="#inicio" class="active">Inicio</a></li>
+      <li><a href="#inicio"    class="active">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    <button class="nav-btn" onclick="goTo('#contacto')">Iniciar Gestión</button>
-    <button class="hamburger" id="ham">
+    <button class="nav-btn" onclick="window.open('https://nina256-i.github.io/delibery_web_page/','_blank')">Iniciar Gestión</button>
+    <button class="hamburger" id="ham" aria-label="Abrir menú">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- ====================================================
-     HERO
-==================================================== -->
+<!-- HERO -->
 <section id="inicio">
   <canvas id="meshCanvas"></canvas>
   <div class="hero-glow"></div>
 
-  <!-- floating pills -->
-  <div class="hf hf-1"><div class="hpill"><div class="hpill-dot"></div>GPS en tiempo real</div></div>
-  <div class="hf hf-2"><div class="hpill"><div class="hpill-dot" style="background:var(--gold-s)"></div>Dynamic Panels</div></div>
-  <div class="hf hf-3"><div class="hpill"><div class="hpill-dot"></div>Spring Boot API</div></div>
-  <div class="hf hf-4"><div class="hpill"><div class="hpill-dot" style="background:var(--gold-s)"></div>SaaS · Escalable</div></div>
+  <div class="hf hf-1"><div class="hpill"><span class="hpill-dot"></span>GPS en tiempo real</div></div>
+  <div class="hf hf-2"><div class="hpill"><span class="hpill-dot gold"></span>Dynamic Panels</div></div>
+  <div class="hf hf-3"><div class="hpill"><span class="hpill-dot"></span>Spring Boot API</div></div>
+  <div class="hf hf-4"><div class="hpill"><span class="hpill-dot gold"></span>SaaS · Escalable</div></div>
 
   <div class="hero-content">
-    <div class="hero-badge"><div class="badge-dot"></div>Tecnología que cruza fronteras</div>
-    <h1 class="hero-h1">
-      Software que
-      <span class="hl">transforma negocios</span>
-    </h1>
+    <h1 class="hero-h1">Software que<span class="hl"> transforma negocios</span></h1>
     <p class="hero-p">En Policode Labs construimos plataformas digitales de alto impacto. Logística inteligente y gestión empresarial para la nueva era digital.</p>
     <div class="hero-btns">
       <a href="#proyectos" class="btn-primary">
-        Ver Proyectos
+        Ver proyectos
         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#contacto" class="btn-ghost">Iniciar Gestión</a>
+      <a href="https://dynamicpanels.com" target="_blank" class="btn-ghost">Iniciar Gestión</a>
     </div>
   </div>
 
   <div class="hero-stats">
     <div class="stats-inner">
-      <div class="stat-item">
-        <div class="stat-num"><span class="acc" data-count="2">0</span></div>
-        <div class="stat-lbl">Proyectos activos</div>
-      </div>
+      <div class="stat-item"><div class="stat-num"><span class="acc" data-count="2">0</span></div><div class="stat-lbl">Proyectos activos</div></div>
       <div class="stat-sep"></div>
-      <div class="stat-item">
-        <div class="stat-num"><span class="acc" data-count="4">0</span></div>
-        <div class="stat-lbl">Ingenieros</div>
-      </div>
+      <div class="stat-item"><div class="stat-num"><span class="acc" data-count="4">0</span></div><div class="stat-lbl">Ingenieros</div></div>
       <div class="stat-sep"></div>
-      <div class="stat-item">
-        <div class="stat-num"><span class="acc" data-count="12">0</span>+</div>
-        <div class="stat-lbl">Tecnologías</div>
-      </div>
+      <div class="stat-item"><div class="stat-num"><span class="acc" data-count="12">0</span>+</div><div class="stat-lbl">Tecnologías</div></div>
       <div class="stat-sep"></div>
-      <div class="stat-item">
-        <div class="stat-num" style="font-size:1.4rem;color:var(--teal-l)">SaaS</div>
-        <div class="stat-lbl">Modelo de negocio</div>
-      </div>
+      <div class="stat-item"><div class="stat-num saas">SaaS</div><div class="stat-lbl">Modelo de negocio</div></div>
     </div>
   </div>
 
-  <div class="scroll-hint">
-    <div class="s-mouse"><div class="s-wheel"></div></div>
-  </div>
+  <div class="scroll-hint"><div class="s-mouse"><div class="s-wheel"></div></div></div>
 </section>
 
-<!-- ====================================================
-     PROPUESTA / IDENTITY — estilo hero de propuesta
-==================================================== -->
+<!-- PROPUESTA -->
 <section id="propuesta">
-  <!-- Big centered brand -->
+
   <div class="prop-brand sr">
-    <div class="prop-logo-mark">
-      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    <p class="prop-lema">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/></svg>
+      Tecnología que cruza fronteras
+    </p>
+    <div class="prop-logo-wrap">
+      <img src="web-Logo-Policode-Labs-v2.svg" alt="Policode Labs" class="prop-logo-img">
     </div>
-    <h2 class="prop-company-name">Policode <span>Labs</span></h2>
-    <p class="prop-slogan">"Transformando ideas en soluciones"</p>
-    <div class="prop-cta-row">
+    <h2 class="prop-creamos">Creamos Soluciones</h2>
+    <div class="prop-tw-wrap">
+      <span class="prop-tw-text" id="twText"></span><span class="prop-tw-cursor" aria-hidden="true">|</span>
+    </div>
+    <div class="prop-ctas">
       <button class="btn-prop-p" onclick="goTo('#proyectos')">Conocer proyectos</button>
-      <button class="btn-prop-g" onclick="goTo('#contacto')">Iniciar Gestión</button>
+      <button class="btn-prop-g" onclick="window.open('https://dynamicpanels.com','_blank')">Iniciar Gestión</button>
     </div>
   </div>
 
-  <!-- Mission / Vision -->
   <div class="prop-mv">
     <div class="prop-mv-card sr sr-l d1">
-      <div class="mv-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      </div>
+      <div class="mv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
       <h3>Misión</h3>
       <p>Somos una empresa dedicada al desarrollo de software de calidad e innovación, que apoya de manera continua mediante las nuevas tecnologías, con el fin de generar beneficios para la sociedad.</p>
     </div>
     <div class="prop-mv-card sr sr-r d2">
-      <div class="mv-icon">
-        <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-      </div>
+      <div class="mv-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
       <h3>Visión</h3>
       <p>Queremos ser un referente en el desarrollo de software, reconocidos por la manera de realizar y presentar nuestros proyectos, así como por la capacidad de innovar, manteniendo siempre los valores del esfuerzo y la dedicación en cada tarea.</p>
     </div>
   </div>
 
-  <!-- 3 pillars -->
   <div class="prop-pillars">
     <div class="pillar sr d1">
       <div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34M4.93 4.93A10 10 0 0 0 3.34 17M12 22a10 10 0 0 0 7.07-2.93"/></svg></div>
@@ -160,29 +133,99 @@
       <p>Modelo SaaS escalable. Paga solo lo que usas, crece sin límites técnicos y recibe actualizaciones continuas sin interrupciones.</p>
     </div>
   </div>
+
 </section>
 
-<!-- ====================================================
-     SERVICES
-==================================================== -->
-<section id="servicios" class="sec">
+<!-- NOSOTROS -->
+<section id="nosotros" class="sec">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-left sr sr-l">
+        <div class="eyebrow">Quiénes somos</div>
+        <h2 class="s-title">Ingenieros que<br>construyen el<br><span class="grad">futuro digital</span></h2>
+        <p class="s-desc">Equipo del CECyT 9 "Juan de Dios Bátiz" del IPN, dedicados al software de calidad que impacta a los negocios locales de la ZMVM.</p>
+
+        <div class="about-stats">
+          <div class="ast"><div class="ast-n"><span class="a cnt" data-to="2">0</span></div><div class="ast-l">Proyectos activos</div></div>
+          <div class="ast"><div class="ast-n"><span class="a cnt" data-to="4">0</span></div><div class="ast-l">Integrantes</div></div>
+          <div class="ast"><div class="ast-n"><span class="cnt" data-to="12">0</span><span class="a">+</span></div><div class="ast-l">Tecnologías</div></div>
+          <div class="ast"><div class="ast-n"><span class="cnt" data-to="100">0</span><span class="a">%</span></div><div class="ast-l">Metodología ágil</div></div>
+        </div>
+
+        <div class="about-vals">
+          <div class="av"><div class="av-em">🎯</div><div><h4>Responsabilidad</h4><p>Transparencia en errores y mejoras continuas de cada desarrollo.</p></div></div>
+          <div class="av"><div class="av-em">⚡</div><div><h4>Diligencia</h4><p>Máxima calidad posible en cada entrega e iteración del proyecto.</p></div></div>
+          <div class="av"><div class="av-em">🔗</div><div><h4>Pertinencia</h4><p>Soluciones alineadas con las necesidades reales del cliente.</p></div></div>
+        </div>
+
+        <div class="team-wrap">
+          <div class="eyebrow" style="margin-bottom:14px">Equipo · 6IM9</div>
+          <div class="team-grid">
+            <div class="tc"><div class="tc-av">GA</div><div class="tc-name">Abraham Gutiérrez Arquieta</div><div class="tc-role">Mobile Application Developer</div></div>
+            <div class="tc"><div class="tc-av">VI</div><div class="tc-name">M. Valentina Islas Hernández</div><div class="tc-role">Digital Marketing Manager</div></div>
+            <div class="tc"><div class="tc-av">AM</div><div class="tc-name">Alexander Modesto Modesto</div><div class="tc-role">Web Developer</div></div>
+            <div class="tc"><div class="tc-av">SM</div><div class="tc-name">Sebastián Gael Moreno Rosales</div><div class="tc-role">Technical Writer</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right sr sr-r d2">
+        <div class="eyebrow" style="margin-bottom:28px">Nuestra historia</div>
+        <div class="about-context">
+          <div class="ctx-item">
+            <div class="ctx-num">Fundación</div>
+            <div class="ctx-title">Policode Labs Corporation</div>
+            <div class="ctx-text">Sociedad dedicada al desarrollo, implementación y comercialización de software, soluciones tecnológicas y plataformas digitales orientadas a la optimización de procesos empresariales y logísticos. Operamos bajo un modelo organizacional horizontal donde todos los integrantes tienen el mismo nivel jerárquico.</div>
+          </div>
+          <div class="ctx-item">
+            <div class="ctx-num">Problema que resolvemos</div>
+            <div class="ctx-title">La brecha digital en la ZMVM</div>
+            <div class="ctx-text">Miles de pequeños negocios en la Zona Metropolitana del Valle de México operan sin tecnología adecuada. La CDMX es una de las ciudades con mayor congestión vehicular, donde los habitantes pierden en promedio hasta 142 horas al año en tráfico. Nuestras plataformas nacen para cerrar esta brecha tecnológica.</div>
+          </div>
+          <div class="ctx-item">
+            <div class="ctx-num">Modelo de negocio</div>
+            <div class="ctx-title">Software como Servicio (SaaS)</div>
+            <div class="ctx-text">Nuestros productos están diseñados para venderse como servicio, asegurando escalabilidad y viabilidad a futuro. Aprovechamos capas gratuitas de Firebase y Google Cloud para reducir el costo operativo inicial, permitiendo que negocios de cualquier tamaño adopten la tecnología.</div>
+          </div>
+          <div class="ctx-item">
+            <div class="ctx-num">Metodología</div>
+            <div class="ctx-title">Desarrollo ágil por sprints</div>
+            <div class="ctx-text">Trabajamos con metodologías ágiles distribuidas en sprints: desde la identidad de la empresa hasta la integración completa del backend con Spring Boot, pasando por base de datos, app Android, panel web y plan de pruebas bajo el estándar ISO 25010.</div>
+          </div>
+          <div class="ctx-item">
+            <div class="ctx-num">Visión a futuro</div>
+            <div class="ctx-title">Referentes en software empresarial</div>
+            <div class="ctx-text">Posicionar a Policode Labs como empresa competitiva en el sector de software empresarial latinoamericano, desarrollando modelos escalables mediante suscripción tecnológica, integrando algoritmos de optimización con IA y expandiendo nuestras plataformas más allá de la ZMVM.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="sec bg-mist">
   <div class="container">
     <div class="svc-layout">
+
       <div class="svc-sticky sr sr-l">
         <div class="eyebrow">Capacidades</div>
         <h2 class="s-title">Lo que<br>construimos</h2>
         <p class="s-desc">Desde arquitectura de backend hasta interfaces de usuario, cubrimos el ciclo completo de desarrollo.</p>
         <div class="svc-counter" id="svc-counter"><span class="acc">1</span>/6</div>
       </div>
+
       <div class="svc-rows sr sr-r d2">
         <div class="sv active" data-n="1">
           <div class="sv-ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <div class="sv-tx"><h4>Desarrollo Web</h4><p>HTML5, CSS3, JavaScript y Spring Boot. Paneles de gestión dinámicos, dashboards responsivos de alto rendimiento.</p></div>
+          <div class="sv-tx"><h4>Desarrollo Web</h4><p>HTML5, CSS3, JavaScript y Spring Boot. Paneles de gestión dinámicos y dashboards responsivos de alto rendimiento.</p></div>
           <div class="sv-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
         <div class="sv" data-n="2">
           <div class="sv-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
-          <div class="sv-tx"><h4>Apps Android Nativas</h4><p>Android Studio con Java. Optimizadas para dispositivos de gama media, con UX intuitivo sin necesidad de capacitación.</p></div>
+          <div class="sv-tx"><h4>Apps Android Nativas</h4><p>Android Studio con Java. Optimizadas para gama media, con UX intuitivo que no requiere capacitación.</p></div>
           <div class="sv-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
         <div class="sv" data-n="3">
@@ -192,7 +235,7 @@
         </div>
         <div class="sv" data-n="4">
           <div class="sv-ic"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-          <div class="sv-tx"><h4>Backend &amp; REST APIs</h4><p>Spring Boot con arquitecturas robustas y APIs RESTful documentadas que conectan app móvil, panel web y base de datos.</p></div>
+          <div class="sv-tx"><h4>Backend &amp; REST APIs</h4><p>Spring Boot con APIs RESTful documentadas que conectan app móvil, panel web y base de datos en tiempo real.</p></div>
           <div class="sv-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
         <div class="sv" data-n="5">
@@ -202,10 +245,11 @@
         </div>
         <div class="sv" data-n="6">
           <div class="sv-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="sv-tx"><h4>SaaS &amp; Escalabilidad</h4><p>Modelos de suscripción tecnológica con Firebase/Google Cloud. Arranque sin inversión inicial con infraestructura en la nube.</p></div>
+          <div class="sv-tx"><h4>SaaS &amp; Escalabilidad</h4><p>Modelos de suscripción con Firebase/Google Cloud. Arranque sin inversión inicial y crecimiento sin límites técnicos.</p></div>
           <div class="sv-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -215,38 +259,35 @@
   <p class="tech-label">Stack tecnológico</p>
   <div class="mq-wrap">
     <div class="mq">
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Android Studio</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Spring Boot</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Google Maps API</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Java</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Firebase</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>MySQL</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>REST APIs</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>HTML5 / CSS3</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>JavaScript</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Git / GitHub</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Bootstrap 5</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Retrofit</span>
-      <!-- duplicate for loop -->
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Android Studio</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Spring Boot</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Google Maps API</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Java</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Firebase</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>MySQL</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>REST APIs</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>HTML5 / CSS3</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>JavaScript</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Git / GitHub</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Bootstrap 5</span>
-      <span class="tech-chip"><span class="tech-chip-dot"></span>Retrofit</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Android Studio</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Spring Boot</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Google Maps API</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Java</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Firebase</span>
+      <span class="tech-chip"><span class="tc-dot"></span>MySQL</span>
+      <span class="tech-chip"><span class="tc-dot"></span>REST APIs</span>
+      <span class="tech-chip"><span class="tc-dot"></span>HTML5 / CSS3</span>
+      <span class="tech-chip"><span class="tc-dot"></span>JavaScript</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Git / GitHub</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Bootstrap 5</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Retrofit</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Android Studio</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Spring Boot</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Google Maps API</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Java</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Firebase</span>
+      <span class="tech-chip"><span class="tc-dot"></span>MySQL</span>
+      <span class="tech-chip"><span class="tc-dot"></span>REST APIs</span>
+      <span class="tech-chip"><span class="tc-dot"></span>HTML5 / CSS3</span>
+      <span class="tech-chip"><span class="tc-dot"></span>JavaScript</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Git / GitHub</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Bootstrap 5</span>
+      <span class="tech-chip"><span class="tc-dot"></span>Retrofit</span>
     </div>
   </div>
 </div>
 
-<!-- ====================================================
-     PROJECTS
-==================================================== -->
+<!-- PROYECTOS -->
 <section id="proyectos" class="sec">
   <div class="container">
     <div class="proj-head sr">
@@ -255,22 +296,21 @@
       <p class="s-desc">Dos plataformas diseñadas para digitalizar y optimizar la operación de negocios mexicanos.</p>
     </div>
   </div>
-
   <div class="container">
-    <div class="proj-stack-wrap">
+    <div class="proj-wrap">
 
-      <!-- ======= DELIVERY IN-TRANSIT ======= -->
+      <!-- Delivery In-Transit -->
       <div class="pj sr-sc d1" id="pj-dit">
         <div class="pj-vis">
           <div class="pj-vis-bg bg-dit"></div>
-          <div class="pj-vis-bg" style="position:absolute;inset:0">
+          <div class="pj-vis-art">
             <div class="dit-art">
               <div class="dit-grid"></div>
-              <svg class="dit-routes" viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
+              <svg class="dit-routes" viewBox="0 0 600 520">
                 <path class="rt" d="M300 260 Q220 180 168 156" stroke="rgba(9,150,136,.45)" stroke-width="1.5" fill="none"/>
-                <path class="rt" d="M300 260 Q400 340 408 312" stroke="rgba(9,150,136,.4)" stroke-width="1.5" fill="none" style="animation-delay:.5s"/>
+                <path class="rt" d="M300 260 Q400 340 408 312" stroke="rgba(9,150,136,.4)"  stroke-width="1.5" fill="none" style="animation-delay:.5s"/>
                 <path class="rt" d="M300 260 Q240 370 192 374" stroke="rgba(9,150,136,.35)" stroke-width="1.5" fill="none" style="animation-delay:1s"/>
-                <path class="rt" d="M300 260 Q370 180 372 132" stroke="rgba(9,150,136,.3)" stroke-width="1.5" fill="none" style="animation-delay:1.5s"/>
+                <path class="rt" d="M300 260 Q370 180 372 132" stroke="rgba(9,150,136,.3)"  stroke-width="1.5" fill="none" style="animation-delay:1.5s"/>
               </svg>
               <div class="dit-rings-wrap">
                 <div class="ring r1"></div><div class="ring r2"></div>
@@ -279,17 +319,16 @@
               <div class="dit-center-dot"></div>
               <div class="dit-node n1"></div><div class="dit-node n2"></div>
               <div class="dit-node n3"></div><div class="dit-node n4"></div>
-              <!-- Phone SVG mockup -->
-              <svg class="dit-phone" viewBox="0 0 120 220" xmlns="http://www.w3.org/2000/svg">
+              <svg class="dit-phone" viewBox="0 0 120 220">
                 <rect x="4" y="4" width="112" height="212" rx="18" fill="#0a1628" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
                 <rect x="12" y="16" width="96" height="188" rx="12" fill="#0d1f38"/>
-                <rect x="12" y="16" width="96" height="28" rx="12" fill="#0a1628"/>
-                <rect x="12" y="32" width="96" height="12" fill="#0a1628"/>
+                <rect x="12" y="16" width="96" height="28"  rx="12" fill="#0a1628"/>
+                <rect x="12" y="32" width="96" height="12"  fill="#0a1628"/>
                 <text x="60" y="34" fill="rgba(255,255,255,.55)" font-size="7.5" text-anchor="middle" font-family="sans-serif" font-weight="700">Delivery In-Transit</text>
                 <rect x="16" y="50" width="88" height="70" rx="8" fill="#0d2535"/>
-                <line x1="16" y1="60" x2="104" y2="60" stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
-                <line x1="16" y1="70" x2="104" y2="70" stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
-                <line x1="16" y1="80" x2="104" y2="80" stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
+                <line x1="16" y1="60"  x2="104" y2="60"  stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
+                <line x1="16" y1="70"  x2="104" y2="70"  stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
+                <line x1="16" y1="80"  x2="104" y2="80"  stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
                 <line x1="16" y1="100" x2="104" y2="100" stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
                 <line x1="36" y1="50" x2="36" y2="120" stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
                 <line x1="60" y1="50" x2="60" y2="120" stroke="rgba(9,150,136,.1)" stroke-width=".5"/>
@@ -313,67 +352,75 @@
             </div>
           </div>
         </div>
-
         <div class="pj-inf">
-          <div class="pj-tag tl">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 22s8-4 8-10a8 8 0 0 0-16 0c0 6 8 10 8 10z"/></svg>
-            App Móvil · Logística GPS
-          </div>
+          <div class="pj-tag tl"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 22s8-4 8-10a8 8 0 0 0-16 0c0 6 8 10 8 10z"/></svg>App Móvil · Logística GPS · ZMVM</div>
           <h3 class="pj-name">Delivery<br>In-Transit</h3>
           <p class="pj-tagline">"Eficiencia en entregas"</p>
-          <p class="pj-desc">Plataforma dual para la gestión de flotas y entregas a domicilio en la ZMVM. Elimina el WhatsApp y las llamadas; centraliza el control en una app Android y un panel web en tiempo real.</p>
+          <p class="pj-desc">Miles de pequeños negocios en la ZMVM gestionan sus repartos por WhatsApp y llamadas, sin control ni visibilidad. En la CDMX los conductores pierden hasta <strong style="color:var(--teal-l)">142 horas al año</strong> en tráfico. Delivery In-Transit centraliza toda la operación en una app Android y un panel web en tiempo real.</p>
 
-          <!-- Tabs -->
+          <div class="pj-context-row">
+            <div class="pj-ctx"><div class="pj-ctx-n">10s</div><div class="pj-ctx-l">Frecuencia GPS</div></div>
+            <div class="pj-ctx"><div class="pj-ctx-n">3</div><div class="pj-ctx-l">Roles de usuario</div></div>
+            <div class="pj-ctx"><div class="pj-ctx-n">SaaS</div><div class="pj-ctx-l">Modelo de negocio</div></div>
+          </div>
+
           <div class="pj-tabs">
             <button class="pj-tab on" onclick="switchTab('dit','funcs',this)">Funciones</button>
             <button class="pj-tab" onclick="switchTab('dit','beneficios',this)">Beneficios</button>
+            <button class="pj-tab" onclick="switchTab('dit','proceso',this)">Proceso</button>
             <button class="pj-tab" onclick="switchTab('dit','publico',this)">Público</button>
           </div>
           <div id="dit-funcs" class="pj-panel vis">
             <div class="feat-list">
-              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Rastreo GPS de repartidores cada 10 segundos, en tiempo real</div>
+              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Rastreo GPS de repartidores cada 10 segundos en tiempo real</div>
               <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Asignación de pedidos con notificación push inmediata al repartidor</div>
               <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Estados: Pendiente → En camino → Entregado, visibles para el dueño</div>
+              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Algoritmo de asignación al repartidor más cercano disponible</div>
               <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Panel web con mapa interactivo y visualización de toda la flota</div>
               <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Reportes de tiempos y rendimiento histórico por repartidor</div>
             </div>
           </div>
           <div id="dit-beneficios" class="pj-panel">
             <div class="ben-grid">
-              <div class="ben"><div class="ben-title">Optimización de rutas</div><div class="ben-desc">Reduce tiempos de entrega y consumo de combustible con asignación inteligente.</div></div>
-              <div class="ben"><div class="ben-title">Control total</div><div class="ben-desc">El dueño tiene visibilidad completa de su flota sin llamadas ni mensajes.</div></div>
-              <div class="ben"><div class="ben-title">Mayor seguridad</div><div class="ben-desc">Registro digital de cada movimiento; reduce riesgo de robo de mercancía.</div></div>
-              <div class="ben"><div class="ben-title">Escalabilidad</div><div class="ben-desc">Modelo SaaS; adaptable desde pequeños negocios hasta grandes flotas.</div></div>
+              <div class="ben"><div class="ben-title">Optimización de rutas</div><div class="ben-desc">Reduce tiempos de entrega y consumo de combustible; contrarresta los 142 hrs/año perdidas en tráfico CDMX.</div></div>
+              <div class="ben"><div class="ben-title">Control total</div><div class="ben-desc">Visibilidad completa de la flota en tiempo real, sin llamadas ni mensajes informales.</div></div>
+              <div class="ben"><div class="ben-title">Mayor seguridad</div><div class="ben-desc">Registro digital de cada movimiento; reduce el riesgo de robo y pérdida de mercancía.</div></div>
+              <div class="ben"><div class="ben-title">Arranque sin inversión</div><div class="ben-desc">Modelo SaaS sobre Firebase/Google Cloud. Los negocios ya tienen smartphones y vehículos.</div></div>
+            </div>
+          </div>
+          <div id="dit-proceso" class="pj-panel">
+            <div class="pj-flow">
+              <div class="pj-step"><div class="pj-step-n">1</div><div><strong>Entrada</strong> — El negocio recibe el pedido por sus canales habituales.</div></div>
+              <div class="pj-step"><div class="pj-step-n">2</div><div><strong>Asignación</strong> — El administrador registra el pedido y selecciona el repartidor más cercano.</div></div>
+              <div class="pj-step"><div class="pj-step-n">3</div><div><strong>Notificación</strong> — Push en la app del repartidor con datos del cliente y ruta GPS optimizada.</div></div>
+              <div class="pj-step"><div class="pj-step-n">4</div><div><strong>Seguimiento</strong> — Transmisión de coordenadas cada 10 s; el dueño sigue al repartidor en el mapa.</div></div>
+              <div class="pj-step"><div class="pj-step-n">5</div><div><strong>Cierre</strong> — El repartidor marca "Entregado"; la base de datos se actualiza automáticamente.</div></div>
             </div>
           </div>
           <div id="dit-publico" class="pj-panel">
             <div class="feat-list">
-              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Restaurantes, farmacias y tiendas de abarrotes con reparto propio</div>
-              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>PyMEs de la ZMVM que quieran dejar de usar WhatsApp para coordinar</div>
-              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Comercios electrónicos que requieren envíos rápidos y trazables</div>
-              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Negocios que no desean depender de plataformas externas (altas comisiones)</div>
+              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Restaurantes, farmacias y tiendas con reparto propio en la ZMVM</div>
+              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>PyMEs que quieren dejar de usar WhatsApp para coordinar entregas</div>
+              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Refaccionarias y comercios electrónicos con envíos rápidos y trazables</div>
+              <div class="feat"><div class="feat-ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Negocios que evitan pagar altas comisiones a plataformas externas</div>
             </div>
           </div>
-
           <div class="pj-stack">
             <span class="stack-chip">Android Studio</span><span class="stack-chip">Spring Boot</span>
-            <span class="stack-chip">Google Maps</span><span class="stack-chip">Firebase</span><span class="stack-chip">MySQL</span>
+            <span class="stack-chip">Google Maps</span><span class="stack-chip">Firebase</span><span class="stack-chip">MySQL</span><span class="stack-chip">Java</span>
           </div>
           <div class="pj-btns">
-            <button class="btn-pj-main tl" onclick="openModal('dit')">
-              Ver proyecto completo
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <button class="btn-pj-main tl" onclick="openModal('dit')">Ver proyecto completo<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
             <button class="btn-pj-sec" onclick="goTo('#contacto')">Contáctanos</button>
           </div>
         </div>
       </div>
 
-      <!-- ======= DYNAMIC PANELS ======= -->
+      <!-- Dynamic Panels -->
       <div class="pj flip sr-sc d2" id="pj-dp">
         <div class="pj-vis">
           <div class="pj-vis-bg bg-dp"></div>
-          <div class="pj-vis-bg" style="position:absolute;inset:0">
+          <div class="pj-vis-art">
             <div class="dp-art">
               <div class="dp-board">
                 <div class="dp-bar-top">
@@ -388,7 +435,7 @@
                   <div class="dp-w w2">
                     <div class="dp-wl">Rendimiento semanal</div>
                     <div class="dp-chart">
-                      <svg viewBox="0 0 200 42" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 200 42" preserveAspectRatio="none">
                         <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#099688" stop-opacity=".3"/><stop offset="100%" stop-color="#099688" stop-opacity="0"/></linearGradient></defs>
                         <path d="M0 38 L28 26 L56 30 L84 10 L112 18 L140 6 L168 12 L200 4 L200 42 L0 42 Z" fill="url(#sg)"/>
                         <path d="M0 38 L28 26 L56 30 L84 10 L112 18 L140 6 L168 12 L200 4" fill="none" stroke="#099688" stroke-width="1.8"/>
@@ -409,78 +456,83 @@
             </div>
           </div>
         </div>
-
         <div class="pj-inf">
-          <div class="pj-tag gd">
-            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-            Plataforma Web · Gestión Empresarial
-          </div>
+          <div class="pj-tag gd"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Plataforma Web · Gestión Empresarial · SaaS</div>
           <h3 class="pj-name">Dynamic<br>Panels</h3>
           <p class="pj-tagline gd">"Personalización y gestión eficientes"</p>
-          <p class="pj-desc">Plataforma integral que centraliza la administración operativa, logística y visual del negocio en paneles completamente personalizables. Incluye el módulo logístico de Delivery In-Transit.</p>
+          <p class="pj-desc">Las PyMEs mexicanas operan con procesos internos desarticulados: supervisión empírica, inventarios sin control y tareas sin seguimiento. Dynamic Panels elimina esa brecha con un panel de control dinámico que centraliza <strong style="color:var(--gold-s)">administración, logística y métricas</strong> en un solo lugar.</p>
+
+          <div class="pj-context-row">
+            <div class="pj-ctx gd"><div class="pj-ctx-n gd">5</div><div class="pj-ctx-l">Módulos integrados</div></div>
+            <div class="pj-ctx gd"><div class="pj-ctx-n gd">4</div><div class="pj-ctx-l">Roles de usuario</div></div>
+            <div class="pj-ctx gd"><div class="pj-ctx-n gd">SaaS</div><div class="pj-ctx-l">Escalabilidad cloud</div></div>
+          </div>
 
           <div class="pj-tabs">
             <button class="pj-tab on-g on" onclick="switchTab('dp','funcs',this,'on-g')">Funciones</button>
-            <button class="pj-tab" onclick="switchTab('dp','beneficios',this,'on-g')">Beneficios</button>
-            <button class="pj-tab" onclick="switchTab('dp','publico',this,'on-g')">Público</button>
+            <button class="pj-tab"          onclick="switchTab('dp','beneficios',this,'on-g')">Beneficios</button>
+            <button class="pj-tab"          onclick="switchTab('dp','proceso',this,'on-g')">Proceso</button>
+            <button class="pj-tab"          onclick="switchTab('dp','publico',this,'on-g')">Público</button>
           </div>
           <div id="dp-funcs" class="pj-panel vis">
             <div class="feat-list">
               <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Paneles visuales personalizables: cuadros, listas, diagonal, vertical</div>
-              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Sistema de roles: cajeros, repartidores, almacenadores, gestores junior</div>
+              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Roles: cajeros, repartidores, almacenadores, gestores junior y admins</div>
               <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Módulo de inventario con registro de movimientos y control de stock</div>
-              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Métricas: costos, tiempos estimados vs reales, rendimiento operativo</div>
-              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Integración completa con Delivery In-Transit incluida</div>
+              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Métricas: costos reales vs estimados, tiempos y rendimiento operativo</div>
+              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Reportes administrativos descargables por periodo</div>
+              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Integración nativa con el módulo logístico de Delivery In-Transit</div>
             </div>
           </div>
           <div id="dp-beneficios" class="pj-panel">
             <div class="ben-grid">
-              <div class="ben"><div class="ben-title">Administración centralizada</div><div class="ben-desc">Todo en un solo tablero: personal, inventario, logística y finanzas.</div></div>
-              <div class="ben"><div class="ben-title">Interfaz adaptable</div><div class="ben-desc">Vistas flexibles que el usuario puede reorganizar según sus preferencias.</div></div>
-              <div class="ben"><div class="ben-title">Decisiones basadas en datos</div><div class="ben-desc">Reportes analíticos descargables para identificar áreas de mejora.</div></div>
-              <div class="ben"><div class="ben-title">Reducción de tiempos muertos</div><div class="ben-desc">Automatización de procesos internos y asignación inteligente de tareas.</div></div>
+              <div class="ben"><div class="ben-title">Elimina fugas financieras</div><div class="ben-desc">Registra gastos y movimientos que antes quedaban fuera del radar del dueño.</div></div>
+              <div class="ben"><div class="ben-title">Sin cuellos de botella</div><div class="ben-desc">Asignación de tareas desde el panel central; cero desorganización de personal.</div></div>
+              <div class="ben"><div class="ben-title">Datos accionables</div><div class="ben-desc">Tableros visuales y reportes para decisiones basadas en métricas reales.</div></div>
+              <div class="ben"><div class="ben-title">Profesionalización</div><div class="ben-desc">Imagen de negocio tecnificado sin pagar consultoras externas costosas.</div></div>
+            </div>
+          </div>
+          <div id="dp-proceso" class="pj-panel">
+            <div class="pj-flow gd">
+              <div class="pj-step gd"><div class="pj-step-n gd">1</div><div><strong>Configuración</strong> — El negocio define parámetros operativos y registra al equipo con roles.</div></div>
+              <div class="pj-step gd"><div class="pj-step-n gd">2</div><div><strong>Planificación</strong> — El administrador distribuye cargas de trabajo y objetivos desde el panel.</div></div>
+              <div class="pj-step gd"><div class="pj-step-n gd">3</div><div><strong>Ejecución</strong> — El personal actualiza el avance de sus tareas en la plataforma.</div></div>
+              <div class="pj-step gd"><div class="pj-step-n gd">4</div><div><strong>Análisis</strong> — El sistema presenta tableros visuales de rendimiento en tiempo real.</div></div>
+              <div class="pj-step gd"><div class="pj-step-n gd">5</div><div><strong>Optimización</strong> — El dueño descarga reportes y ajusta procesos para maximizar rentabilidad.</div></div>
             </div>
           </div>
           <div id="dp-publico" class="pj-panel">
             <div class="feat-list">
               <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Talleres, boutiques y clínicas locales con flujo constante de personal</div>
-              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Negocios de comida y delivery que requieren gestión de múltiples áreas</div>
-              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Empresas que quieran profesionalizar su administración sin consultorías costosas</div>
+              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Negocios de comida y delivery con múltiples áreas operativas</div>
+              <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Empresas que profesionalizan su gestión sin altos costos de consultoría</div>
               <div class="feat"><div class="feat-ck g"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>PyMEs en crecimiento que necesitan escalar su operación interna</div>
             </div>
           </div>
-
           <div class="pj-stack">
             <span class="stack-chip">HTML5 / CSS3</span><span class="stack-chip">JavaScript</span>
-            <span class="stack-chip">Spring Boot</span><span class="stack-chip">MySQL</span><span class="stack-chip">Bootstrap 5</span>
+            <span class="stack-chip">Spring Boot</span><span class="stack-chip">MySQL</span><span class="stack-chip">Bootstrap 5</span><span class="stack-chip">Java</span>
           </div>
           <div class="pj-btns">
-            <button class="btn-pj-main gd" onclick="openModal('dp')">
-              Ver proyecto completo
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <button class="btn-pj-main gd" onclick="openModal('dp')">Ver proyecto completo<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
             <button class="btn-pj-sec" onclick="goTo('#contacto')">Contáctanos</button>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ====================================================
-     MODALS
-==================================================== -->
-<!-- DIT Modal -->
+<!-- MODAL: Delivery In-Transit -->
 <div class="modal-bg" id="modal-dit">
   <div class="modal-box">
     <div class="modal-header">
-      <div class="modal-art bg-dit" style="position:relative">
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
-          <div style="position:relative;width:220px;height:220px;display:flex;align-items:center;justify-content:center">
-            <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
-            <div class="dit-center-dot"></div>
-            <div class="dit-node n1"></div><div class="dit-node n2"></div>
-          </div>
+      <div class="modal-art bg-dit">
+        <div class="modal-art-inner">
+          <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+          <div class="dit-center-dot"></div>
+          <div class="dit-node n1"></div><div class="dit-node n2"></div>
         </div>
       </div>
       <div class="modal-head-info">
@@ -497,7 +549,7 @@
     </div>
     <div class="modal-body">
       <div>
-        <p class="m-section-h">Características del software</p>
+        <p class="m-sec-h">Características del software</p>
         <div class="m-feat-list">
           <div class="m-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Registro de negocios, vehículos y repartidores con roles diferenciados</div>
           <div class="m-feat"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Asignación automática al repartidor más cercano o disponible</div>
@@ -509,9 +561,9 @@
         </div>
       </div>
       <div>
-        <p class="m-section-h">Visión a futuro</p>
-        <p style="color:rgba(255,255,255,.52);font-size:.87rem;line-height:1.7;margin-bottom:24px">Ser la solución tecnológica de referencia en logística y transporte, liderando un cambio hacia sistemas de movilidad más inteligentes. Delivery In-Transit aspira a convertirse en el puente entre empresas, conductores y clientes, asegurando que cada entrega llegue siempre rápido, seguro y confiable.</p>
-        <p class="m-section-h">Stack técnico</p>
+        <p class="m-sec-h">Visión a futuro</p>
+        <p class="m-body-text">Ser la solución de referencia en logística y transporte, liderando un cambio hacia sistemas de movilidad más inteligentes. Delivery In-Transit aspira a convertirse en el puente entre empresas, conductores y clientes, asegurando que cada entrega llegue siempre rápido, seguro y confiable.</p>
+        <p class="m-sec-h" style="margin-top:24px">Stack técnico</p>
         <div class="m-tech-chips">
           <span class="m-tech">Android Studio</span><span class="m-tech">Java</span>
           <span class="m-tech">Spring Boot</span><span class="m-tech">REST API</span>
@@ -523,28 +575,27 @@
     </div>
     <div class="modal-foot">
       <p>¿Te interesa Delivery In-Transit?</p>
-      <button class="btn-modal-cta t" onclick="closeModal('dit');goTo('#contacto')">
-        Iniciar Gestión
-        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
+      <button class="btn-modal-cta t" onclick="closeModal('dit');window.open('https://dynamicpanels.com','_blank')">Iniciar Gestión<svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
     </div>
   </div>
 </div>
 
-<!-- DP Modal -->
+<!-- MODAL: Dynamic Panels -->
 <div class="modal-bg" id="modal-dp">
   <div class="modal-box">
     <div class="modal-header">
-      <div class="modal-art bg-dp" style="position:relative">
-        <div style="position:absolute;inset:20px;background:rgba(255,255,255,.05);border-radius:12px;border:1px solid rgba(255,255,255,.07);overflow:hidden;padding:14px">
-          <div style="height:22px;background:rgba(255,255,255,.05);border-radius:6px;margin-bottom:8px;display:flex;align-items:center;gap:5px;padding:0 8px">
-            <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,100,100,.5)"></div>
-            <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,210,100,.5)"></div>
-            <div style="width:6px;height:6px;border-radius:50%;background:rgba(100,220,100,.5)"></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">
-            <div style="background:rgba(9,150,136,.12);border-radius:7px;padding:9px;border:1px solid rgba(9,150,136,.2)"><div style="font-size:.5rem;color:rgba(255,255,255,.35);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em">Ventas</div><div style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#4dd4c8">$24.3k</div></div>
-            <div style="background:rgba(201,168,76,.1);border-radius:7px;padding:9px;border:1px solid rgba(201,168,76,.2)"><div style="font-size:.5rem;color:rgba(255,255,255,.35);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em">Personal</div><div style="font-family:Montserrat,sans-serif;font-size:1rem;font-weight:800;color:#d4b96a">12 act.</div></div>
+      <div class="modal-art bg-dp">
+        <div class="modal-art-inner" style="padding:20px">
+          <div style="background:rgba(255,255,255,.05);border-radius:12px;border:1px solid rgba(255,255,255,.07);overflow:hidden;padding:14px;height:100%">
+            <div style="height:22px;background:rgba(255,255,255,.05);border-radius:6px;margin-bottom:8px;display:flex;align-items:center;gap:5px;padding:0 8px">
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,100,100,.5)"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,210,100,.5)"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(100,220,100,.5)"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">
+              <div style="background:rgba(9,150,136,.12);border-radius:7px;padding:9px;border:1px solid rgba(9,150,136,.2)"><div style="font-size:.5rem;color:rgba(255,255,255,.35);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em">Ventas</div><div style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#4dd4c8">$24.3k</div></div>
+              <div style="background:rgba(201,168,76,.1);border-radius:7px;padding:9px;border:1px solid rgba(201,168,76,.2)"><div style="font-size:.5rem;color:rgba(255,255,255,.35);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em">Personal</div><div style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#d4b96a">12 act.</div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -552,7 +603,7 @@
         <button class="modal-close" onclick="closeModal('dp')">✕</button>
         <div class="pj-tag gd" style="margin-bottom:16px">Plataforma Web · Gestión</div>
         <h2 class="modal-title">Dynamic Panels</h2>
-        <p class="modal-sub">Plataforma web con paneles completamente personalizables para la gestión integral de PyMEs. Centraliza administración, logística y métricas en una sola interfaz dinámica.</p>
+        <p class="modal-sub">Plataforma web con paneles personalizables para la gestión integral de PyMEs. Centraliza administración, logística y métricas en una sola interfaz dinámica.</p>
         <div class="pj-stack" style="margin:0">
           <span class="stack-chip">HTML5/CSS3</span><span class="stack-chip">JavaScript</span>
           <span class="stack-chip">Spring Boot</span><span class="stack-chip">MySQL</span>
@@ -562,20 +613,20 @@
     </div>
     <div class="modal-body">
       <div>
-        <p class="m-section-h">Características del software</p>
+        <p class="m-sec-h">Características del software</p>
         <div class="m-feat-list">
-          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Registro y gestión de usuarios: administradores y empleados con roles propios</div>
-          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Paneles visuales: cuadros, diagonales, listas y rectángulos horizontales</div>
+          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Registro y gestión de usuarios con roles y permisos personalizados</div>
+          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Paneles visuales configurables: cuadros, diagonales, listas, verticales</div>
           <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Asignación automática de pedidos al vehículo más cercano disponible</div>
-          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Sistema de mapas interactivos con monitoreo GPS en tiempo real</div>
-          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Panel con métricas clave: costos, tiempos estimados vs reales, rendimiento</div>
-          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Generación de reportes analíticos y modelo de suscripción escalable</div>
+          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Mapas interactivos con monitoreo GPS en tiempo real</div>
+          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Panel con métricas: costos, tiempos estimados vs reales, rendimiento</div>
+          <div class="m-feat"><svg viewBox="0 0 24 24" stroke="#d4b96a"><polyline points="20 6 9 17 4 12"/></svg>Reportes analíticos descargables y modelo de suscripción escalable</div>
         </div>
       </div>
       <div>
-        <p class="m-section-h">Visión a futuro</p>
-        <p style="color:rgba(255,255,255,.52);font-size:.87rem;line-height:1.7;margin-bottom:24px">Convertirse en el tablero de control predilecto para las PyMEs mexicanas, siendo reconocidos por adaptabilidad y modernidad. Dynamic Panels aspira a democratizar el acceso a la gestión empresarial de alto nivel para cualquier tipo de negocio, sin importar su tamaño.</p>
-        <p class="m-section-h">Stack técnico</p>
+        <p class="m-sec-h">Visión a futuro</p>
+        <p class="m-body-text">Convertirse en el tablero de control predilecto para las PyMEs mexicanas, siendo reconocidos por adaptabilidad y modernidad. Dynamic Panels aspira a democratizar el acceso a la gestión empresarial de alto nivel para cualquier tipo de negocio, sin importar su tamaño.</p>
+        <p class="m-sec-h" style="margin-top:24px">Stack técnico</p>
         <div class="m-tech-chips">
           <span class="m-tech">HTML5</span><span class="m-tech">CSS3</span>
           <span class="m-tech">JavaScript</span><span class="m-tech">Bootstrap 5</span>
@@ -587,99 +638,22 @@
     </div>
     <div class="modal-foot">
       <p>¿Te interesa Dynamic Panels?</p>
-      <button class="btn-modal-cta t" style="background:linear-gradient(135deg,var(--gold-w),#8a6820)" onclick="closeModal('dp');goTo('#contacto')">
-        Iniciar Gestión
-        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
+      <button class="btn-modal-cta gold" onclick="closeModal('dp');window.open('https://dynamicpanels.com','_blank')">Iniciar Gestión<svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
     </div>
   </div>
 </div>
 
-<!-- ====================================================
-     NOSOTROS
-==================================================== -->
-<section id="nosotros" class="sec">
-  <div class="container">
-    <div class="about-grid">
-      <!-- Left: sticky info -->
-      <div class="about-left sr sr-l">
-        <div class="eyebrow">Quiénes somos</div>
-        <h2 class="s-title">Ingenieros que<br>construyen el<br><span class="grad">futuro digital</span></h2>
-        <p class="s-desc">Equipo del CECyT 9 "Juan de Dios Bátiz" del IPN, dedicados al software de calidad que impacta a los negocios locales de la ZMVM.</p>
 
-        <div class="about-stats">
-          <div class="ast"><div class="ast-n"><span class="a cnt" data-to="2">0</span></div><div class="ast-l">Proyectos activos</div></div>
-          <div class="ast"><div class="ast-n"><span class="a cnt" data-to="4">0</span></div><div class="ast-l">Integrantes</div></div>
-          <div class="ast"><div class="ast-n"><span class="cnt" data-to="12">0</span><span class="a">+</span></div><div class="ast-l">Tecnologías</div></div>
-          <div class="ast"><div class="ast-n"><span class="cnt" data-to="100">0</span><span class="a">%</span></div><div class="ast-l">Metodología ágil</div></div>
-        </div>
-
-        <div class="about-vals">
-          <div class="av"><div class="av-em">🎯</div><div><h4>Responsabilidad</h4><p>Transparencia en errores y mejoras continuas de cada desarrollo.</p></div></div>
-          <div class="av"><div class="av-em">⚡</div><div><h4>Diligencia</h4><p>Máxima calidad posible en cada entrega e iteración del proyecto.</p></div></div>
-          <div class="av"><div class="av-em">🔗</div><div><h4>Pertinencia</h4><p>Soluciones alineadas con las necesidades reales del cliente.</p></div></div>
-        </div>
-
-        <div style="margin-top:36px">
-          <div class="eyebrow" style="margin-bottom:14px">Equipo · 6IM9</div>
-          <div class="team-grid">
-            <div class="tc"><div class="tc-av">GA</div><div class="tc-name">Abraham Gutiérrez Arquieta</div><div class="tc-role">Mobile Application Developer</div></div>
-            <div class="tc"><div class="tc-av">VI</div><div class="tc-name">M. Valentina Islas Hernández</div><div class="tc-role">Digital Marketing Manager</div></div>
-            <div class="tc"><div class="tc-av">AM</div><div class="tc-name">Alexander Modesto Modesto</div><div class="tc-role">Web Developer</div></div>
-            <div class="tc"><div class="tc-av">SM</div><div class="tc-name">Sebastián Gael Moreno Rosales</div><div class="tc-role">Technical Writer</div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: company context -->
-      <div class="sr sr-r d2">
-        <div class="about-right-eyebrow">
-          <div class="eyebrow">Nuestra historia</div>
-        </div>
-        <div class="about-context">
-          <div class="ctx-item">
-            <div class="ctx-num">Fundación</div>
-            <div class="ctx-title">Policode Labs Corporation</div>
-            <div class="ctx-text">Sociedad dedicada al desarrollo, implementación y comercialización de software, soluciones tecnológicas y plataformas digitales orientadas a la optimización de procesos empresariales y logísticos. Operamos bajo un modelo organizacional horizontal donde todos los integrantes tienen el mismo nivel jerárquico.</div>
-          </div>
-          <div class="ctx-item">
-            <div class="ctx-num">Problema que resolvemos</div>
-            <div class="ctx-title">La brecha digital en la ZMVM</div>
-            <div class="ctx-text">Miles de pequeños negocios en la Zona Metropolitana del Valle de México operan sin tecnología adecuada. La CDMX es una de las ciudades con mayor congestión vehicular, donde los habitantes pierden en promedio hasta 142 horas al año en tráfico. Nuestras plataformas nacen para cerrar esta brecha tecnológica.</div>
-          </div>
-          <div class="ctx-item">
-            <div class="ctx-num">Modelo de negocio</div>
-            <div class="ctx-title">Software como Servicio (SaaS)</div>
-            <div class="ctx-text">Nuestros productos están diseñados para venderse como servicio, asegurando escalabilidad y viabilidad a futuro. Aprovechamos capas gratuitas de Firebase y Google Cloud para reducir el costo operativo inicial, permitiendo que negocios de cualquier tamaño puedan adoptar la tecnología.</div>
-          </div>
-          <div class="ctx-item">
-            <div class="ctx-num">Metodología</div>
-            <div class="ctx-title">Desarrollo ágil por sprints</div>
-            <div class="ctx-text">Trabajamos con metodologías ágiles distribuidas en 10 sprints: desde la identidad de la empresa hasta la integración completa del backend con Spring Boot, pasando por el diseño de base de datos, desarrollo de la app Android, panel web y plan de pruebas bajo el estándar ISO 25010.</div>
-          </div>
-          <div class="ctx-item">
-            <div class="ctx-num">Visión a futuro</div>
-            <div class="ctx-title">Referentes en software empresarial</div>
-            <div class="ctx-text">Posicionar a Policode Labs como una empresa competitiva en el sector de software empresarial latinoamericano. Nuestro objetivo es desarrollar modelos de negocio escalables mediante suscripción tecnológica, integrar algoritmos de optimización con IA y expandir nuestras plataformas más allá de la ZMVM.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====================================================
-     CONTACT
-==================================================== -->
+<!-- CONTACTO -->
 <section id="contacto" class="sec">
   <div class="container">
     <div class="contact-grid">
+
       <div class="sr sr-l">
         <div class="eyebrow">Contacto</div>
         <h2 class="s-title">Inicia tu<br>gestión hoy</h2>
         <p class="s-desc">Cuéntanos sobre tu negocio. Analizamos tus necesidades y te proponemos la plataforma más adecuada.</p>
-
-        <div style="margin-top:40px">
+        <div class="contact-details">
           <div class="cd">
             <div class="cd-ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
             <div><label>Email</label><p>policodelabs@gmail.com</p></div>
@@ -723,6 +697,7 @@
           <p class="form-note">Tu mensaje llegará directamente a policodelabs@gmail.com</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -731,16 +706,15 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <div class="f-brand-logo">
-          <div class="f-logo-mark"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-          <span class="f-brand-name">Policode Labs</span>
+          <img src="web-Logo-Policode-Labs-v2.svg" alt="Policode Labs" class="f-logo-img">
         </div>
         <p class="f-tagline">Software Development and Technology Solutions.<br>Tecnología que cruza fronteras.</p>
         <div class="f-socials">
-          <a href="#" class="f-soc"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
-          <a href="#" class="f-soc"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="mailto:policodelabs@gmail.com" class="f-soc"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          <a href="#" class="f-soc" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          <a href="#" class="f-soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="mailto:policodelabs@gmail.com" class="f-soc" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
         </div>
       </div>
       <div class="f-col">
@@ -781,7 +755,6 @@
     </div>
   </div>
 </footer>
-
 
 <script src="script.js"></script>
 </body>
