@@ -59,6 +59,9 @@ button,input,textarea,select { font-family:var(--font-b); }
   position:fixed; top:0; left:0; right:0; height:var(--nav-h);
   background:rgba(255,255,255,.96); backdrop-filter:blur(24px);
   border-bottom:1px solid transparent; z-index:1000;
+  transition:border-color .3s, box-shadow .3s, z-index 0s;
+}
+body.menu-open #navbar { z-index:1300;
   transition:border-color .3s, box-shadow .3s;
 }
 #navbar.scrolled { border-color:rgba(9,150,136,.1); box-shadow:0 4px 32px rgba(9,150,136,.08); }
@@ -87,20 +90,25 @@ button,input,textarea,select { font-family:var(--font-b); }
 }
 .nav-btn:hover { background:var(--teal-d); transform:translateY(-1px); box-shadow:0 8px 24px rgba(9,150,136,.3); }
 
-.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; background:none; border:none; }
-.hamburger span { display:block; width:22px; height:2px; background:var(--ink); border-radius:2px; transition:.3s; }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; background:none; border:none; position:relative; z-index:1300; }
+.hamburger span { display:block; width:22px; height:2.5px; background:var(--ink); border-radius:2px; transition:transform .3s var(--ease), opacity .2s, background .25s; }
+/* Cuando el menú está abierto el hamburguer flota sobre el overlay oscuro → barras blancas */
+body.menu-open .hamburger span { background:#fff; }
 
-/* Mobile nav overlay */
+/* Mobile nav overlay — usa visibility en vez de display:none para poder animar */
 .mob-nav {
-  display:none; position:fixed; inset:0;
+  position:fixed; inset:0;
   background:rgba(6,12,11,.97); backdrop-filter:blur(20px);
-  flex-direction:column; align-items:center; justify-content:center;
-  gap:8px; z-index:999;
-  opacity:0; transform:translateY(-8px);
-  transition:opacity .3s var(--ease), transform .3s var(--ease);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:8px; z-index:1200;
+  opacity:0; visibility:hidden; transform:translateY(-10px);
+  transition:opacity .3s var(--ease), transform .3s var(--ease), visibility 0s linear .3s;
   pointer-events:none;
 }
-.mob-nav.open { opacity:1; transform:none; pointer-events:all; }
+.mob-nav.open {
+  opacity:1; visibility:visible; transform:none; pointer-events:all;
+  transition:opacity .3s var(--ease), transform .3s var(--ease), visibility 0s linear 0s;
+}
 .mob-nav a { font-family:var(--font-h); font-size:1.6rem; font-weight:800; color:rgba(255,255,255,.75); padding:12px 32px; transition:color .2s; }
 .mob-nav a:hover { color:var(--teal-l); }
 .mob-cta { font-size:1rem !important; background:linear-gradient(135deg,var(--teal),var(--teal-d)); color:white !important; border-radius:50px; margin-top:12px; }

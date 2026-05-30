@@ -119,6 +119,7 @@ let menuOpen  = false;
 function toggleMenu(open) {
   menuOpen = open;
   mobNav.classList.toggle('open', menuOpen);
+  document.body.classList.toggle('menu-open', menuOpen);
   document.body.style.overflow = menuOpen ? 'hidden' : '';
   const ss = ham.querySelectorAll('span');
   ss[0].style.transform = menuOpen ? 'rotate(45deg) translate(5px,5px)'   : '';
