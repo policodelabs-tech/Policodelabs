@@ -271,3 +271,27 @@ document.getElementById('cform').addEventListener('submit', function (e) {
   }
   setTimeout(tick, 600);
 })();
+
+/* ── Modal de selección de producto (Iniciar Gestión) ───────────── */
+function openProductsModal() {
+  const m = document.getElementById('modal-products');
+  if (m) { m.classList.add('on'); document.body.style.overflow = 'hidden'; }
+}
+
+function closeProductsModal(e) {
+  const m = document.getElementById('modal-products');
+  if (!m) return;
+  if (e && e.target !== m) return;
+  m.classList.remove('on');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const m = document.getElementById('modal-products');
+    if (m && m.classList.contains('on')) {
+      m.classList.remove('on');
+      document.body.style.overflow = '';
+    }
+  }
+});

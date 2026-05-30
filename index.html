@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Policode Labs — Tecnología que cruza fronteras</title>
-  <link rel="icon" type="image/svg+xml" href="Isologo-Policode-Labs.svg">
-  <link rel="shortcut icon" href="Isologo-Policode-Labs.svg">
+  <link rel="icon" type="image/svg+xml" href="Alt-Logo-Policode-Labs.svg">
+  <link rel="shortcut icon" href="Alt-Logo-Policode-Labs.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
   <a href="#servicios">Servicios</a>
   <a href="#proyectos">Proyectos</a>
   <a href="#contacto">Contacto</a>
-  <a href="https://policodelabs-tech.github.io/Delivery_In-Transit_web/" target="_blank" class="mob-cta">Iniciar Gestión →</a>
+  <a href="javascript:void(0)" onclick="openProductsModal()" class="mob-cta">Iniciar Gestión →</a>
 </div>
 
 <!-- NAVBAR -->
@@ -41,7 +41,7 @@
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    <button class="nav-btn" onclick="window.open('https://policodelabs-tech.github.io/Delivery_In-Transit_web/','_blank')">Iniciar Gestión</button>
+    <button class="nav-btn" onclick="openProductsModal()">Iniciar Gestión</button>
     <button class="hamburger" id="ham" aria-label="Abrir menú">
       <span></span><span></span><span></span>
     </button>
@@ -50,8 +50,13 @@
 
 <!-- HERO -->
 <section id="inicio">
+  <!-- Video de fondo — reemplaza src con tu propio video -->
+  <video class="hero-video" autoplay muted loop playsinline poster="">
+    <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-map-with-network-connections-2089-large.mp4" type="video/mp4">
+  </video>
   <canvas id="meshCanvas"></canvas>
   <div class="hero-glow"></div>
+  <div class="hero-noise"></div>
 
   <div class="hf hf-1"><div class="hpill"><span class="hpill-dot"></span>GPS en tiempo real</div></div>
   <div class="hf hf-2"><div class="hpill"><span class="hpill-dot gold"></span>Dynamic Panels</div></div>
@@ -67,7 +72,7 @@
           Ver proyectos
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="https://policodelabs-tech.github.io/Delivery_In-Transit_web/" target="_blank" class="btn-ghost">Iniciar Gestión</a>
+        <a href="javascript:void(0)" onclick="openProductsModal()" class="btn-ghost">Iniciar Gestión</a>
       </div>
     </div>
 
@@ -304,6 +309,7 @@
       <div class="pj sr-sc d1" id="pj-dit">
         <div class="pj-vis">
           <div class="pj-vis-bg bg-dit"></div>
+
           <div class="pj-vis-art">
             <div class="dit-art">
               <div class="dit-grid"></div>
@@ -355,7 +361,7 @@
         </div>
         <div class="pj-inf">
           <div class="pj-tag tl"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 22s8-4 8-10a8 8 0 0 0-16 0c0 6 8 10 8 10z"/></svg>App Móvil · Logística GPS · ZMVM</div>
-          <h3 class="pj-name">Delivery<br>In-Transit</h3>
+          <img src="Web-Logo-Delivery_in-Transit-v2.svg" alt="Delivery In-Transit" class="pj-name-logo pj-name-logo-dit">
           <p class="pj-tagline">"Eficiencia en entregas"</p>
           <p class="pj-desc">Miles de pequeños negocios en la ZMVM gestionan sus repartos por WhatsApp sin control ni visibilidad. En la CDMX los conductores pierden hasta <strong style="color:var(--teal-l)">142 horas al año</strong> en tráfico. Delivery In-Transit centraliza toda la operación en tiempo real.</p>
           <div class="pj-context-row">
@@ -420,6 +426,7 @@
       <div class="pj flip sr-sc d2" id="pj-dp">
         <div class="pj-vis">
           <div class="pj-vis-bg bg-dp"></div>
+
           <div class="pj-vis-art">
             <div class="dp-art">
               <div class="dp-board">
@@ -457,7 +464,7 @@
         </div>
         <div class="pj-inf">
           <div class="pj-tag gd"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Plataforma Web · Gestión Empresarial · SaaS</div>
-          <h3 class="pj-name">Dynamic<br>Panels</h3>
+          <img src="web-Logo-Dynamic-Panels-v2.svg" alt="Dynamic Panels" class="pj-name-logo pj-name-logo-dp">
           <p class="pj-tagline gd">"Personalización y gestión eficientes"</p>
           <p class="pj-desc">Las PyMEs mexicanas operan con procesos internos desarticulados: supervisión empírica, inventarios sin control y tareas sin seguimiento. Dynamic Panels elimina esa brecha con un panel que centraliza <strong style="color:var(--gold-s)">administración, logística y métricas</strong>.</p>
           <div class="pj-context-row">
@@ -636,7 +643,7 @@
     </div>
     <div class="modal-foot">
       <p>¿Te interesa Dynamic Panels?</p>
-      <button class="btn-modal-cta gold" onclick="closeModal('dp');window.open('https://policodelabs-tech.github.io/Delivery_In-Transit_web/','_blank')">Iniciar Gestión<svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+      <button class="btn-modal-cta gold" onclick="closeModal('dp');window.open('https://policodelabs-tech.github.io/Dynamic_Panels-Web/','_blank')">Iniciar Gestión<svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
     </div>
   </div>
 </div>
@@ -752,6 +759,40 @@
     </div>
   </div>
 </footer>
+
+<!-- MODAL: Iniciar Gestión — Selector de producto -->
+<div class="modal-bg" id="modal-products">
+  <div class="modal-products-box">
+    <button class="modal-close modal-products-close" onclick="this.closest('.modal-bg').classList.remove('on');document.body.style.overflow=''">✕</button>
+    <div class="mp-header">
+      <div class="eyebrow">Nuestras plataformas</div>
+      <h3 class="mp-title">¿Qué plataforma<br>deseas visitar?</h3>
+    </div>
+    <div class="mp-items">
+      <!-- Delivery In-Transit -->
+      <div class="mp-item mp-item-dit">
+        <div class="mp-item-logo">
+          <img src="Web-Logo-Delivery_in-Transit-v2.svg" alt="Delivery In-Transit" class="mp-logo-img">
+        </div>
+        <div class="mp-item-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </div>
+        <a href="https://policodelabs-tech.github.io/Delivery_In-Transit_web/" target="_blank" class="mp-visit-btn mp-visit-tl">Visita la página</a>
+      </div>
+      <div class="mp-divider"></div>
+      <!-- Dynamic Panels -->
+      <div class="mp-item mp-item-dp">
+        <div class="mp-item-logo">
+          <img src="web-Logo-Dynamic-Panels-v2.svg" alt="Dynamic Panels" class="mp-logo-img">
+        </div>
+        <div class="mp-item-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </div>
+        <a href="https://policodelabs-tech.github.io/Dynamic_Panels-Web/" target="_blank" class="mp-visit-btn mp-visit-gd">Visita la página</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
